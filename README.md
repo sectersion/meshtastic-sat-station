@@ -16,20 +16,17 @@ I did lots of research on this project, and here is what I came up with:
 
 I am using a 3D printed helical antenna tuned for 1692.7 MHz, which is the frequency that GOES EMWIN East communicates on. I chose a 3d printed approach to save space in the casing, and costs in the BOM.
 
--
 
 ### Antenna 2
 
 For communicating on the mesh, I chose a generic 915MHz fiberglass antenna. This should be reliable enough for multi-day high density operation, and at 5.8dbm plenty powerful.
 
--
 
 ### Mesh Node
 
 I am using the RAKWireless nRF52 based node with the RAK19007 base board
 
--
- 
+
 ### Case
 
 The case is a bit special. I chose a generic 8x11x5in pelican case, which will have holes drilled in it for:
@@ -41,4 +38,3 @@ The case is a bit special. I chose a generic 8x11x5in pelican case, which will h
 
 The left side will be taken up by a 3d printed box housing the electronics, and the right side will be for storage of deployable components.
 
--
