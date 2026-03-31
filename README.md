@@ -4,7 +4,7 @@
 A self-contained, fully off-grid deployable kit that receives real-time weather data directly from GOES satellites and serves it on demand to any nearby Meshtastic mesh node — no internet, no cell service, no infrastructure required.
 
 > Built for [Hack Club Stasis](https://stasis.hackclub.com)
-
+NOTE TO REVIEWERS: The BOM present in my project was exported from google sheets and the links got deleted. The original google sheet is availible in the stasis project itself, and in the README.
 ---
 
 ## The Problem
