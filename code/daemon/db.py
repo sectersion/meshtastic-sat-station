@@ -57,29 +57,3 @@ def get_state(con, key):
     return row[0]
 
 
-
-if __name__ == "__main__":
-    conn = init_db("test.db")
-    print("DB initialized OK")
-
-    # insert a fake old row to test purge
-    conn.execute("""
-        INSERT INTO products (received_at, product_id, product_type, raw_text)
-        VALUES ('2020-01-01T00:00:00', 'TEST', 'metar', 'old data')
-    """)
-    conn.commit()
-
-    # check it exists
-    rows = conn.execute("SELECT COUNT(*) FROM products").fetchone()
-    print(f"Before purge: {rows[0]} rows")
-
-    purge_old(conn)
-
-    rows = conn.execute("SELECT COUNT(*) FROM products").fetchone()
-    print(f"After purge: {rows[0]} rows")  # should be 0
-
-    set_state(conn, "sat_lock", "true")
-    print(get_state(conn, "sat_lock"))   # should print "true"
-    print(get_state(conn, "missing"))    # should print None
-
-    conn.close()

@@ -56,7 +56,7 @@ def wx_command(con, args) -> str:
 
     # parse key fields from raw METAR text
     import re
-    obs     = ""
+    obs = ""
     for line in nearest[3].splitlines():
         if "METAR" in line or re.match(r'K[A-Z]{3}\s+\d{6}Z', line.strip()):
             import re
